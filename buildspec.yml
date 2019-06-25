@@ -3,7 +3,7 @@ version: 0.2
 phases:
   pre_build:
     commands:
-    - $(aws ecr get-login --region $AWS_DEFUALT_REGION --no-include-email)
+    - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
     - REPO=$(aws ecr describe-repositories --repository-names example --output text --query "repositories[0].repositoryUri")
     - IAMGE=$REPO:latest
   build:
