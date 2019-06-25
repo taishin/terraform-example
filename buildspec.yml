@@ -8,7 +8,7 @@ phases:
     - IAMGE=$REPO:latest
   build:
     commands:
-    - docker build -t $IMAGE
+    - docker build -t $IMAGE .
     - docker push $IMAGE
   post_build:
     commands:
